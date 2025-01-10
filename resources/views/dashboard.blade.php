@@ -27,9 +27,12 @@
     <body>
         <header>
             <nav class="navbar bg-body-tertiary">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                     <img src="{{ asset('img/Tekleen-Logo_Full-Color-Small.png') }}" alt="Tekleen"  height="32">
+                    </a>
+                    <a href="https://github.com/AntonioMotaUASLP/TaskManagerAPI" target="_blank" class="mx-2">
+                        <i class="bi bi-github"></i> Repositorio de GitHub
                     </a>
                 </div>
             </nav>
@@ -166,6 +169,17 @@
         </main>
         <footer>
             <!-- place footer here -->
+            <div class="bg-light text-center py-3">
+                <p>Jorge Antonio Mota</p>
+                <p>antoniomotauaslp@gmail.com</p>
+                <p>444 330 7360</p>
+                <a href="www.linkedin.com/in/jorge-antonio-mota-villa" target="_blank" class="mx-2">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/AntonioMotaUASLP" target="_blank" class="mx-2">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script
