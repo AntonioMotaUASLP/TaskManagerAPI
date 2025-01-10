@@ -28,8 +28,15 @@ function loadTasks(page = 1, filter = currentFilter) {
                     <td>${task.description || ''}</td>
                     <td>${task.status}</td>
                     <td>
-                        <button class="btn btn-warning btn-sm" onclick="showEditModal(${task.id})">Editar</button>
-                        <button class="btn btn-danger btn-sm" onclick="deleteTask(${task.id})">Eliminar</button>
+                        <button class="btn btn-info btn-sm" onclick="showDetailsModal(${task.id})">
+                            <i class="bi bi-eye"></i> Detalles
+                        </button>
+                        <button class="btn btn-warning btn-sm" onclick="showEditModal(${task.id})">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteTask(${task.id})">
+                            <i class="bi bi-trash"></i> 
+                        </button>
                     </td>
                 </tr>
             `;
@@ -116,6 +123,17 @@ $('#editTaskForm').submit(function(e) {
         }
     });
 });
+
+// Mostrar detalles de una tarea
+function showDetailsModal(id) {
+    $.get(`/api/tasks/${id}`, function(task) {
+        $('#detailsTaskId').text(task.id);
+        $('#detailsTaskTitle').text(task.title);
+        $('#detailsTaskDescription').text(task.description || 'No hay descripción');
+        $('#detailsTaskStatus').text(task.status);
+        $('#detailsTaskModal').modal('show');
+    });
+}
 
 // Eliminar una tarea
 // DELETE /api/tasks/:id

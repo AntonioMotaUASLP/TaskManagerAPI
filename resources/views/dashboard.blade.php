@@ -16,6 +16,12 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <!-- Bootstrap Icons CSS v1.8.1 -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+            rel="stylesheet"
+        />
+
     </head>
 
     <body>
@@ -136,7 +142,26 @@
                 </div>
             </div>
 
-
+            <!-- Modal para Ver Detalles de Tarea -->
+            <div class="modal fade" id="detailsTaskModal" tabindex="-1" aria-labelledby="detailsTaskModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detailsTaskModalLabel">Detalles de la Tarea</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>ID:</strong> <span id="detailsTaskId"></span></p>
+                            <p><strong>Título:</strong> <span id="detailsTaskTitle"></span></p>
+                            <p><strong>Descripción:</strong> <span id="detailsTaskDescription"></span></p>
+                            <p><strong>Estado:</strong> <span id="detailsTaskStatus"></span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </main>
         <footer>
